@@ -16,7 +16,7 @@
 {
     self.view = [[RootView alloc] init];
 
-    self.redView = [[RedView alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
+    self.redView = [[RedView alloc] initWithFrame:CGRectMake(200, 200, 100, 100)];
     self.redView.backgroundColor = [UIColor redColor];
 
     [self.view addSubview:self.redView];
