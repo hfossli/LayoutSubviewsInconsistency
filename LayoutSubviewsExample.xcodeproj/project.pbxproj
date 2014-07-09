@@ -393,6 +393,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LayoutSubviewsExample/LayoutSubviewsExample-Prefix.pch";
 				INFOPLIST_FILE = "LayoutSubviewsExample/LayoutSubviewsExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -406,6 +407,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LayoutSubviewsExample/LayoutSubviewsExample-Prefix.pch";
 				INFOPLIST_FILE = "LayoutSubviewsExample/LayoutSubviewsExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -470,6 +472,7 @@
 				A396256D196C160300202E42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A396256E196C160300202E42 /* Build configuration list for PBXNativeTarget "LayoutSubviewsExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +481,7 @@
 				A3962570196C160300202E42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
