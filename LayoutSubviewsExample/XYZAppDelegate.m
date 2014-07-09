@@ -33,63 +33,63 @@
     int index = 0;
 
     [self delayWithInterval:timing * ++index block:^{
-        printf("\n-------------------------------------------------\n");
-        printf("Changing frame of rootViewController.view.redView\n");
-        printf("Expects: Layout of subviews in\n");
+        printf("\n----------------------------------------------------\n");
+        printf("Changing 'frame' in rootViewController.view.redView:\n");
+        controller.redView.frame = CGRectMake(20, 20, 200, 200);
+        printf("\nExpects layout of subviews in:\n");
         printf(" - RedView\n");
         printf(" - RedLayer\n");
         printf("\n");
-        controller.redView.frame = CGRectMake(20, 20, 200, 200);
     }];
 
     [self delayWithInterval:timing * ++index block:^{
-        printf("\n-----------------------------------------------------------\n");
-        printf("Changing transform of rootViewController.view.redView\n");
-        printf("Expects: No update of layouts\n");
-        printf("\n");
+        printf("\n--------------------------------------------------------\n");
+        printf("Changing 'transform' in rootViewController.view.redView:\n");
         controller.redView.transform = CGAffineTransformMakeRotation(0.3);
+        printf("\nExpects NO update of layouts\n");
+        printf("\n");
     }];
 
     [self delayWithInterval:timing * ++index block:^{
-        printf("\n-----------------------------------------------------------\n");
-        printf("Changing layer.transform of rootViewController.view.redView\n");
-        printf("Expects: No update of layouts\n");
-        printf("\n");
+        printf("\n--------------------------------------------------------------\n");
+        printf("Changing 'layer.transform' in rootViewController.view.redView:\n");
         controller.redView.layer.transform = CATransform3DMakeRotation(0.5, 0.0, 0.0, 1.0);
+        printf("\nExpects NO update of layouts\n");
+        printf("\n");
     }];
 
     [self delayWithInterval:timing * ++index block:^{
-        printf("\n--------------------------------------------------\n");
-        printf("Changing center of rootViewController.view.redView\n");
-        printf("Expects: No update of layouts\n");
-        printf("\n");
+        printf("\n-----------------------------------------------------\n");
+        printf("Changing 'center' in rootViewController.view.redView:\n");
         controller.redView.center = CGPointMake(200, 200);
-    }];
-
-    [self delayWithInterval:timing * ++index block:^{
-        printf("\n----------------------------------------------------------\n");
-        printf("Changing layer.position of rootViewController.view.redView\n");
-        printf("Expects: No update of layouts\n");
+        printf("\nExpects NO update of layouts\n");
         printf("\n");
-        controller.redView.layer.position = CGPointMake(205, 205);
     }];
 
     [self delayWithInterval:timing * ++index block:^{
         printf("\n-------------------------------------------------------------\n");
-        printf("Changing layer.anchorPoint of rootViewController.view.redView\n");
-        printf("Expects: No update of layouts\n");
+        printf("Changing 'layer.position' in rootViewController.view.redView:\n");
+        controller.redView.layer.position = CGPointMake(205, 205);
+        printf("\nExpects NO update of layouts\n");
         printf("\n");
-        controller.redView.layer.anchorPoint = CGPointMake(0.6, 0.4);
     }];
 
     [self delayWithInterval:timing * ++index block:^{
-        printf("\n--------------------------------------------------\n");
-        printf("Changing bounds of rootViewController.view.redView\n");
-        printf("Expects: Layout of subviews in\n");
+        printf("\n----------------------------------------------------------------\n");
+        printf("Changing 'layer.anchorPoint' in rootViewController.view.redView:\n");
+        controller.redView.layer.anchorPoint = CGPointMake(0.6, 0.4);
+        printf("\nExpects NO update of layouts\n");
+        printf("\n");
+    }];
+
+    [self delayWithInterval:timing * ++index block:^{
+        printf("\n-----------------------------------------------------\n");
+        printf("Changing 'bounds' in rootViewController.view.redView:\n");
+        controller.redView.bounds = CGRectMake(0, 0, 150, 150);
+        printf("\nExpects layout of subviews in:\n");
         printf(" - RedView\n");
         printf(" - RedLayer\n");
         printf("\n");
-        controller.redView.bounds = CGRectMake(0, 0, 150, 150);
     }];
 
     return YES;

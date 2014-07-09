@@ -24,9 +24,8 @@
 
 - (void)viewDidLayoutSubviews
 {
-    [super viewDidLayoutSubviews];
-
     printf("-[RootViewController viewDidLayoutSubviews]\n");
+    [super viewDidLayoutSubviews];
 }
 
 @end
