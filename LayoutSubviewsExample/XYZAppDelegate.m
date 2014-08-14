@@ -83,6 +83,30 @@
     }];
 
     [self delayWithInterval:timing * ++index block:^{
+        printf("\n----------------------------------------------------------------\n");
+        printf("Changing 'layer.anchorPointZ' in rootViewController.view.redView:\n");
+        controller.redView.layer.anchorPointZ = 3;
+        printf("\nExpects NO update of layouts\n");
+        printf("\n");
+    }];
+
+    [self delayWithInterval:timing * ++index block:^{
+        printf("\n----------------------------------------------------------------\n");
+        printf("Changing 'layer.position' in rootViewController.view.redView:\n");
+        controller.redView.layer.position = CGPointMake(102, 202);
+        printf("\nExpects NO update of layouts\n");
+        printf("\n");
+    }];
+
+    [self delayWithInterval:timing * ++index block:^{
+        printf("\n----------------------------------------------------------------\n");
+        printf("Changing 'layer.zPosition' in rootViewController.view.redView:\n");
+        controller.redView.layer.zPosition = 100;
+        printf("\nExpects NO update of layouts\n");
+        printf("\n");
+    }];
+
+    [self delayWithInterval:timing * ++index block:^{
         printf("\n-----------------------------------------------------\n");
         printf("Changing 'bounds' in rootViewController.view.redView:\n");
         controller.redView.bounds = CGRectMake(0, 0, 150, 150);
