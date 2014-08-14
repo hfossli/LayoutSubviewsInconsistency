@@ -28,7 +28,10 @@ These properties does not trigger any layout
 
 I find it very confusing that transform is triggering layout and that position and anchorPoint does not.  
 
-Can you please explain why I am seeing this behavior. I can not find anything about this in the docs nor the header files. The problem is significant when using UIDynamics or similar.
+**Can you please explain why I am seeing this behavior? I can not find anything about this in the docs nor the header files. The problem is significant when using UIDynamics or similar.**
+
+
+------
 
 
 Full log
